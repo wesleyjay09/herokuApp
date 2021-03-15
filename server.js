@@ -16,7 +16,7 @@ app.use(express.json());
 
 app.post("/",  async(req, res)=>{
     try {
-      res.send('Created')
+      res.json('Created')
     } catch (err) {
         console.error(err.message)
     }
@@ -29,7 +29,6 @@ app.get("/", async(req, res)=>{
     try {
       
         res.json('Working')
-        res.send("working")
       } catch (err) {
           console.error(err.message)
       }
@@ -39,9 +38,9 @@ app.get("/", async(req, res)=>{
 //getting a single task
 app.get("/", async(req, res)=>{
     try {
-        const {id} = req.params
+        
         res.json('Working')
-        res.send(id)
+        
       } catch (err) {
           console.error(err.message)
       }
@@ -50,9 +49,9 @@ app.get("/", async(req, res)=>{
 //delete task
 app.delete('/', async (req, res) => {
     try {
-      const {id} = req.params
+      
         res.json('Working')
-        res.send(id)
+       
       } catch (err) {
           console.error(err.message)
       }
@@ -64,9 +63,9 @@ app.delete('/', async (req, res) => {
 //update task
 app.put('/', async (req,res) => {
     try {
-      const {id} = req.params
+      
         res.json('Working')
-        res.send(id)
+        
       } catch (err) {
           console.error(err.message)
       }
