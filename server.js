@@ -14,7 +14,7 @@ app.use(express.static('public'))
 
 
 
-app.post("/api",  async(req, res)=>{
+app.post("/",  async(req, res)=>{
     try {
       res.send('Created')
     } catch (err) {
@@ -25,7 +25,7 @@ app.post("/api",  async(req, res)=>{
 
 
 //get all todos
-app.get("/api", async(req, res)=>{
+app.get("/", async(req, res)=>{
     try {
       
         res.json('Working')
@@ -37,7 +37,7 @@ app.get("/api", async(req, res)=>{
 
 
 //getting a single task
-app.get("/api/:id", async(req, res)=>{
+app.get("/", async(req, res)=>{
     try {
         const {id} = req.params
         res.json('Working')
@@ -48,7 +48,7 @@ app.get("/api/:id", async(req, res)=>{
   })
 
 //delete task
-app.delete('/api/:id', async (req, res) => {
+app.delete('/', async (req, res) => {
     try {
       const {id} = req.params
         res.json('Working')
@@ -62,7 +62,7 @@ app.delete('/api/:id', async (req, res) => {
 
 
 //update task
-app.put('/api/:id', async (req,res) => {
+app.put('/', async (req,res) => {
     try {
       const {id} = req.params
         res.json('Working')
